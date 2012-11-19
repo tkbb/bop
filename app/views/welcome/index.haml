@@ -1,3 +1,3 @@
-= form_tag plans_path(@plan) do
+= form_tag plans_path(@plan), class: 'form-inline' do
   = date_select :plan, :month, :order => [:year, :month]
-  = submit_tag "登録"
+  = submit_tag "登録", class: 'btn btn-primary'

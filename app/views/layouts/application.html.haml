@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title Bop
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    #wrap
+      .container
+        .page-header
+          %h1 BoP
+        %p.lead
+          Bouldering Planning tool
+        #push
+          = yield
+    #footer
+      .container
+        %p.muted.credit
+          tkbb
