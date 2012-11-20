@@ -1,1 +1,12 @@
 @import "bootstrap";
+@import "compass/utilities";
+@import "compass/css3";
+@import "zurui-sass";
+
+body {
+  background-color: #f6f5f0;
+}
+
+.page-header {
+  @include zurui-line-bottom;
+}
