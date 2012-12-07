@@ -1,1 +1,10 @@
-list of Plan
+%table{border: 1}
+  %tr
+    %th id
+    %th url
+    %th name
+  - @plans.each do |it|
+    %tr
+      %td= it.id
+      %td= it.url
+      %td= it.name

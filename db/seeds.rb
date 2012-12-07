@@ -10,3 +10,9 @@ Plan.create(name: "2012.11 in tkbb",
 			days: "{date: 10, count: 3}, {date: 25, count: 1}",
 			comments: "{name: 'vestige', says: 'one'}, {name:, 't2o', says: 'two'}",
 			gyms: "{name: 'ogikubo', count: 4}, {name: 'akihabara', count: 2}")
+Plan.create(name: "2012.10 in tkbb",
+			url: "http://localhost/111/", 
+			month: 201210,
+			days: "{date: 10, count: 3}, {date: 25, count: 1}",
+			comments: "{name: 'vestige', says: 'one'}, {name:, 't2o', says: 'two'}",
+			gyms: "{name: 'ogikubo', count: 4}, {name: 'akihabara', count: 2}")
