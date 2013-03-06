@@ -1,3 +1,16 @@
-= form_tag plans_path(@plan), class: 'form-inline' do
-  = date_select :plan, :month, :order => [:year, :month]
-  = submit_tag "登録", class: 'btn btn-primary'
+/ = form_tag plans_path(@plan), class: 'form-inline' do
+/   = date_select :plan, :month, :order => [:year, :month]
+/   = submit_tag "登録", class: 'btn btn-primary'
+
+%div
+  = link_to '▲', '#'
+%div
+  %p 3/4 (月)
+  %p 3/5 (火)
+  %p 3/6 (水)
+  %p 3/7 (木)
+  %p 3/8 (金)
+  %p 3/9 (土)
+  %p 3/10 (日)
+%div
+  = link_to '▼', '#'
