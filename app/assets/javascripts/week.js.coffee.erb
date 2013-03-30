@@ -2,18 +2,11 @@
 # b: カレンダーを表示するためのデータを Rails 側で生成する
 # 1 と 2 を合わせた json が渡ってくる。
 
-<%
-day_of_weeks = %w(月 火 水 木 金 土 日)
-days = []
-(DateTime.now.beginning_of_month..DateTime.now.end_of_month).map do |datetime|
-  days << datetime.strftime("%Y/%m/%d(#{day_of_weeks[datetime.wday]})")
-end
-%>
-
-cal_days = <%= days %>
+<% environment.context_class.instance_eval { include ApplicationHelper } %>
 
 set_cal = ->
-  $(cal_days).each (i, day) ->
+  days = <%= days_of_a_month %>
+  $(days).each (i, day) ->
     $('#calendar').append("<p>#{day}</p>")
 
 $ ->
