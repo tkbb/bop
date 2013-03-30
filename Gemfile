@@ -20,6 +20,7 @@ group :assets do
   gem 'zurui-sass-rails'
 end
 
+gem 'rails-i18n'
 gem 'jquery-rails'
 gem 'haml'
 gem 'thin'
