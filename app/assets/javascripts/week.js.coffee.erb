@@ -4,10 +4,26 @@
 
 <% environment.context_class.instance_eval { include ApplicationHelper } %>
 
-set_cal = ->
-  days = <%= days_of_a_month %>
-  $(days).each (i, day) ->
-    $('#calendar').append("<p>#{day}</p>")
+class Week
+  target_date: 0
+  days_of_a_month: <%= days_of_a_month %>
+
+  set_cal: ->
+    target_date = parseInt(@target_date) + 7
+    $(@days_of_a_month).each (i, day) ->
+      if i < target_date
+        $('#calendar').append("<p>#{day}</p>")
+
+  prev_week: ->
+    @target_date = parseInt(@target_date) + 7
+    @set_cal()
 
 $ ->
-  set_cal()
+  week = new Week
+  p week.target_date
+  week.set_cal()
+  $('#prev_week').on 'click', ->
+    week.prev_week()
+    # 前の一週間を表示する
+  # $('#next_week').on 'click', ->
+  #   alert 'hoi!!'
