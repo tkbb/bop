@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def days_of_a_month
     days_of_the_week = I18n.t('date.abbr_day_names')
     days = []
@@ -9,5 +8,4 @@ module ApplicationHelper
     end
     days
   end
-
 end
